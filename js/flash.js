@@ -3,7 +3,6 @@
 
 document.body.onload = function() {
 	endProgress();
-	flashStopBlinkingCircles();
 }
 
 // the-end-of-onloading

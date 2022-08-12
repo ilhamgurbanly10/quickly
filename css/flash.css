@@ -49,11 +49,15 @@ a {
 	background-color: #fa053c;
 	color: #fff;
 	padding: 1rem;
-	font-family: Verdana, sans-serif;
+	font-family: Poppins, Verdana;
 	position: absolute;
 	bottom: 1rem;
+	font-size: 14px;
+	line-height: 24px;
 	z-index: 10;
 	letter-spacing: 2px;
+	max-width: 80%;
+	margin: 0 auto;
 	text-align: center;
 }
 
@@ -184,6 +188,35 @@ a {
 /*-fl-not-dropdown-arrow-*/
 .fl-not-dropdown-arrow > .nav-link::after {
 	content: none;
+}
+
+/*-fl-dropdown-arrow-*/
+.fl-dropdown-arrow > .nav-link::after {
+	border: 0;
+	content: "\f078";
+	font-family: FontAwesome;
+	color: var(--white);
+	margin-left: .1rem;
+	font-size: 8px;
+	transition: all .3s;
+	width: auto !important;
+	height: auto !important;
+}
+
+@media (hover: hover) {
+
+	.fl-dropdown-arrow:hover > .nav-link::after {
+		color: inherit;
+		transform: rotate(180deg);
+		-webkit-transform: rotate(180deg);
+	}
+
+}
+
+.nav-link[aria-expanded="true"]::after {
+	color: inherit;
+	transform: rotate(180deg);
+	-webkit-transform: rotate(180deg);
 }
 
 /*-fl-dropdown-center-*/
@@ -372,7 +405,7 @@ a {
 	}
 
 	.fl-navbar-toggler[aria-expanded="true"]  .fl-navbar-toggler-line {
-		background: transparent;
+		background: transparent !important;
 	    transition: background 0.1s ease;
 	}
 
