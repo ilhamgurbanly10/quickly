@@ -1,2 +1,12 @@
 Navigation Bars - 3
 Hero Sections - 2
+Feature Blocks - 1
+Metrics - 2
+Testimonials - 4
+CTAs - 4
+Images - 1
+Tabs - 1
+Page Header - 2
+Footer - 3
+Team Section - 4
+Pricing - 2
