@@ -131,10 +131,10 @@
 
 </header>    
 
-<!-- style="display: block !important;" -->
+
 
 <!-- sign-up-modal -->
-<div class="modal fade bg-lightgreen" id="signUpModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade bg-lightgreen darkgreen-decorations position-fixed" id="signUpModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 
 	<div class="modal-dialog container-2 modal-dialog-centered" role="document">
 
@@ -144,40 +144,48 @@
 				<span aria-hidden="true">&times;</span>
 			</button>
 
-			<form class="user-form" action="sign_up.php" target="" method="POST">
+			<form class="user-form fl-form" action="sign_up.php" target="" method="POST">
 
 				<h4 class="form-title darkgreen-title">
 					Get started with Quickly.
 				</h4>
 
-				<div class="form-group margin-t-1">
+				<div class="form-group margin-t-1 fl-form-container">
+
 					<label for="signUpName" class="darkgreen-text margin-b-1">Your Name</label>
-					<input type="text" class="form-control white-input" id="signUpName" name="signUpName" placeholder="Enter your name">
+					<input type="text" class="form-control white-input fl-form-input fl-form-required fl-form-limit" id="signUpName" name="signUpName" placeholder="Enter your name" fl-form-min="5" fl-form-max="15">
+
+					<p class="fl-form-error-message fl-form-required-message">This field is required</p>
+					<p class="fl-form-error-message fl-form-limit-message">You must write minimum 5 and maximum 15 characters</p>
+
 				</div>
 
-				<div class="form-group margin-t-2">
+				<div class="form-group margin-t-2 fl-form-container">
+
 					<label for="signUpEmail" class="darkgreen-text margin-b-1">Your email</label>
-					<input type="email" class="form-control white-input" id="signUpEmail" name="signUpEmail" aria-describedby="emailHelp" placeholder="Your@email.com">
+					<input type="email" class="form-control white-input fl-form-input fl-form-required fl-form-email" id="signUpEmail" name="signUpEmail" aria-describedby="emailHelp" placeholder="Your@email.com">
+
+					<p class="fl-form-error-message fl-form-required-message">This field is required</p>
+					<p class="fl-form-error-message fl-form-email-message">Invalid email address</p>
+
 				</div>
 
-				<div class="form-group margin-t-2">
+				<div class="form-group margin-t-2 fl-form-container">
+
 					<label for="signUpPassword" class="darkgreen-text margin-b-1">Password</label>
-					<input type="password" class="form-control white-input" id="signUpPassword" name="signUpPassword" placeholder="Enter password">
+					<input type="password" class="form-control white-input fl-form-input fl-form-required fl-form-limit" id="signUpPassword" name="signUpPassword" placeholder="Enter password"  fl-form-min="7" fl-form-max="20">
+
+					<p class="fl-form-error-message fl-form-required-message">This field is required</p>
+					<p class="fl-form-error-message fl-form-limit-message">You must write minimum 7 and maximum 20 characters</p>
+
 				</div>
 
-				<div class="form-check margin-t-2">
-					<input type="checkbox" class="form-check-input white-checkbox" id="signUpAgreement" name="signUpAgreement">
-					<label class="form-check-label darkgreen-text-2" for="signUpAgreement">
-						I agree to the terms and conditions
-					</label>
+				<div class="custom-control custom-checkbox white-checkbox margin-t-2">
+					<input type="checkbox" class="custom-control-input" id="signUpAgreement">
+					<label class="custom-control-label darkgreen-text-2" for="signUpAgreement">I agree to the terms and conditions</label>
 				</div>
 
-	  <!-- <div class="custom-control custom-checkbox mr-sm-2">
-        <input type="checkbox" class="custom-control-input" id="customControlAutosizing">
-        <label class="custom-control-label" for="customControlAutosizing">Remember my preference</label>
-      </div> -->
-
-				<button type="submit" class="btn-2 darkgreen-btn margin-t-2 grow-on-hover" name="signUpSubmit">
+				<button type="submit" class="btn-2 darkgreen-btn margin-t-2 grow-on-hover fl-form-submit fl-form-btn" name="signUpSubmit">
 					Create your free account
 				</button>
 
@@ -198,7 +206,7 @@
 
 
 <!-- log-in-modal -->
-<div class="modal fade bg-lightgreen" id="logInModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade bg-lightgreen darkgreen-decorations position-fixed" id="logInModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 
 	<div class="modal-dialog container-2 modal-dialog-centered" role="document">
 
@@ -208,33 +216,41 @@
 				<span aria-hidden="true">&times;</span>
 			</button>
 
-			<form class="user-form" action="sign_in.php" target="" method="POST">
+			<form class="user-form fl-form" action="sign_in.php" target="" method="POST">
 
 				<h4 class="form-title darkgreen-title">
 					Sign in to Quickly.
 				</h4>
 
-				<div class="form-group margin-t-1">
+				<div class="form-group margin-t-1 fl-form-container">
+
 					<label for="signInEmail" class="darkgreen-text margin-b-1">Your email</label>
-					<input type="email" class="form-control white-input" id="signInEmail" name="signInEmail" aria-describedby="emailHelp" placeholder="Your@email.com">
+					<input type="email" class="form-control white-input fl-form-input fl-form-required fl-form-email" id="signInEmail" name="signInEmail" aria-describedby="emailHelp" placeholder="Your@email.com">
+
+					<p class="fl-form-error-message fl-form-required-message">This field is required</p>
+					<p class="fl-form-error-message fl-form-email-message">Invalid email address</p>
+
 				</div>
 
-				<div class="form-group margin-t-2">
+				<div class="form-group margin-t-2 fl-form-container">
+
 					<label for="signInPassword" class="darkgreen-text margin-b-1 w-100 d-flex justify-content-between flex-wrap">
 						Password
 						<a href="#" class="darkgreen-link-2">Forgot your password?</a>
 					</label>
-					<input type="password" class="form-control white-input" id="signInPassword" name="signInPassword" placeholder="Enter password">
+					<input type="password" class="form-control white-input fl-form-input fl-form-required fl-form-limit" id="signInPassword" name="signInPassword" placeholder="Enter password"  fl-form-min="7" fl-form-max="20">
+
+					<p class="fl-form-error-message fl-form-required-message">This field is required</p>
+					<p class="fl-form-error-message fl-form-limit-message">You must write minimum 7 and maximum 20 characters</p>
+
 				</div>
 
-				<div class="form-check margin-t-2">
-					<input type="checkbox" checked class="form-check-input white-checkbox" id="signInRemember" name="signInRemember">
-					<label class="form-check-label darkgreen-text-2" for="signInRemember">
-						Remember me on this device
-					</label>
+				<div class="custom-control custom-checkbox white-checkbox margin-t-2">
+					<input type="checkbox" checked class="custom-control-input" id="signInRemember">
+					<label class="custom-control-label darkgreen-text-2" for="signInRemember">Remember me on this device</label>
 				</div>
 
-				<button type="submit" class="btn-2 darkgreen-btn margin-t-2 grow-on-hover" name="signInSubmit">
+				<button type="submit" class="btn-2 darkgreen-btn margin-t-2 grow-on-hover fl-form-btn fl-form-submit" name="signInSubmit">
 					Sign in
 				</button>
 
@@ -251,6 +267,88 @@
 
 </div>
 <!-- the-end-of-log-in-modal -->
+
+
+
+<!-- hero-section -->
+
+<section class="hero margin-t-3 container-3">
+
+	<div class="hero-list list-1 align-items-end">
+
+		<div class="hero-item">
+
+			<h6 class="hero-top-title small-darkgreen-title text-left">
+				The new way to work online
+			</h6>
+
+			<h2 class="hero-title darkgreen-title-2 margin-t-4 text-left">
+				Get the important work done <span class="green-underline-decoration">faster</span> 
+			</h2>
+
+			<p class="hero-text darkgreen-text-3 margin-t-2">
+				With Quickly, you can get more productive <br> 
+				work done in far less time than ever before.
+			</p>
+
+			<div class="hero-btn-list row w-100 mx-auto margin-t-1">
+
+				<button type="button" class="hero-btn btn-3 darkgreen-btn grow-on-hover sign-up-btn col-12 col-lg-auto margin-r-lg-3" data-toggle="modal" data-target="#signUpModal">
+					Sign up
+				</button>
+
+				<a href="#" class="hero-btn grow-on-hover btn-3 white-btn col-12 col-lg-auto mt-4 mt-lg-0">Learn more</a>
+
+			</div>
+
+		</div>
+
+		<div class="hero-item border-green-decoration">
+
+			<div class="hero-top-box d-flex align-items-center align-content-center lightgrey-box-shadow-2 bg-white border-radius-1 padding-2 lg-absolute-box mb-5 mg-lg-0">
+
+				<img src="images/users/user-01.png" alt="User Image" class="hero-top-box-img margin-r-2 green-border">
+
+				<div class="hero-top-box-container">
+
+					<h3 class="hero-top-box-title darkgreen-title-3 text-left">New task assigned</h3>
+
+					<p class="hero-top-box-text darkgreen-text margin-t-5 text-left">
+						Louise assigned you a project
+					</p>
+
+				</div>
+
+			</div>
+
+			<img src="images/bg-img-02.png" alt="Background Image" class="hero-img full-width-img">
+
+			<div class="hero-bottom-box row w-100 mx-auto align-items-start lightgrey-box-shadow-2 bg-white border-radius-1 padding-3 lg-absolute-box-2 mt-5 mt-lg-0">
+
+				<img src="images/icons/checkmark.png" alt="Checkmark" class="hero-bottom-box-img col-auto">
+
+				<div class="hero-bottom-box-container col-12 col-sm mt-4 mt-sm-0">
+
+					<h3 class="hero-bottom-box-title darkgreen-title-3 text-left">Project Updated</h3>
+
+					<div class="hero-bottom-box-line full-lightgrey-line margin-t-6"></div>
+
+					<div class="hero-bottom-box-line lightgrey-line margin-t-6"></div>
+
+					<div class="hero-bottom-box-fake-btn green-fake-btn margin-t-4"></div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
+
+</section>
+
+<!-- the-end-of-hero-section -->
+
 
 
 <footer class="footer margin-t-5 container-4 pb-4" style="display: none;">

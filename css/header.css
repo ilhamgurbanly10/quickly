@@ -1,5 +1,6 @@
 
-header {
+.fl-header {
+	position: relative;
 	z-index: 20;
 }
 
