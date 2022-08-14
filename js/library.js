@@ -7,7 +7,60 @@ switchModals();
 
 flashForm();
 
+counter();
+
 // the-end-of-calling-functions
+
+
+
+// counter
+
+function counter() {
+
+	const counters = document.querySelectorAll('.counter-number');
+	var scrollLimit = window.innerHeight || document.documentElement.clientHeight;
+	scrollLimit -= 100;
+
+  if (!counters[0]) return;
+
+	const isInView = () => {
+
+		const elementTop = counters[0].getBoundingClientRect().top;
+
+		if (elementTop <= scrollLimit) {
+
+			window.removeEventListener('scroll', isInView);	
+			for (let i = 0; i < counters.length; i++) { flashCounter(counters[i], "get-from-target", 0, 3, 1) }
+
+		}
+
+	}
+
+	window.addEventListener('scroll', isInView);
+	window.addEventListener('load', isInView);	
+
+}
+
+const flashCounter = (el, to, from = 0, add = 1, speed = 1) => {
+
+	var myFunction;
+	var num = from;
+	el.innerHTML = from;
+
+	if (to == "get-from-target") to = el.getAttribute('to');
+
+	myFunction = setInterval(function() {
+
+		num += add;
+		el.innerHTML = num;
+
+		if (num + add >= to) { clearInterval(myFunction); el.innerHTML = to; }	
+
+	}, speed);
+
+}
+
+// the-end-of-counter
 
 
 
@@ -306,24 +359,12 @@ function switchModals() {
 $('.slider').slick({
   dots: true,
   infinite: true,
-  slidesToShow: 5,
+  slidesToShow: 1,
   slidesToScroll: 1,
   speed: 300,
-  arrows: false,
-  responsive: [
-    {
-      breakpoint: 575,
-      settings: {
-        slidesToShow: 1,
-      }
-    },
-    {
-      breakpoint: 991,
-      settings: {
-        slidesToShow: 3,
-      }
-    }
-  ]  
+  arrows: true, 
+  autoplay: true, 
+  autoplaySpeed: 5000
 });
 
 // the-end-of-slider
