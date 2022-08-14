@@ -10,3 +10,4 @@ Page Header - 2
 Footer - 3
 Team Section - 4
 Pricing - 2
+Social Proof Logos - 2
