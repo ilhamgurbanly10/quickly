@@ -371,6 +371,40 @@ $('.slider').slick({
 
 
 
+// slider-2
+
+$('.slider-2').slick({
+  dots: true,
+  infinite: true,
+  slidesToShow: 3,
+  slidesToScroll: 3,
+  speed: 700,
+  rows: 2,
+  arrows: false,
+  responsive: [
+    {
+      breakpoint: 575,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        rows: 1,
+      }
+    },
+    {
+      breakpoint: 991,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2,
+        rows: 1,
+      }
+    }
+  ]  
+});
+
+// the-end-of-slider-2
+
+
+
 // flash-back-to-top-button
 
 function flashBackToTop() {
