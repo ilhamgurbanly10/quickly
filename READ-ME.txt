@@ -8,7 +8,7 @@ Metrics - 2
 Quotes - 4
 CTAs - 4
 Images - 1
-Tabs - 1
+Tabs - 2
 Page Header - 2
 Footer - 3
 Team Section (+ Slider)- 4
