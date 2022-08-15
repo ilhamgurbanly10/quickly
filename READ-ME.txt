@@ -1,4 +1,5 @@
 + Progress Animation
++ Responsive Layout
 Modal Forms (+ Live Check) 
 Navigation Bars - 3
 Hero Sections - 2
